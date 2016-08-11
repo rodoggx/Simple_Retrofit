@@ -67,6 +67,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
             textViewName = (TextView) itemView.findViewById(R.id.l_item_txt);
             imageViewName = (ImageView) itemView.findViewById(R.id.l_item_img);
+
+            //item click listener - response to item click
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.d(TAG, "onClick: " + textViewName.getText());
+                }
+            });
         }
     }
 }
